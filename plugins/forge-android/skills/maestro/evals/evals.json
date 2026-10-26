@@ -1,0 +1,24 @@
+{
+  "skill_name": "maestro",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "给项目已有 Maestro flow 补 Wi-Fi 关闭场景；当前 ANDROID_SERIAL 已绑定，设备初始 Wi-Fi 关闭。脚本失败退出后也要恢复原状态，不要动蜂窝网络。",
+      "expected_output": "先核对现有场景和授权；绑定校验，记录 Wi-Fi 原值并恢复关闭；明确 Wi-Fi 关闭不证明离线，恢复失败保留非零；不一律开网或沿用历史设备。",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "uiautomator dump 超时后还能看到首页标识，能算首页准备完成吗？另外 wm size 同时有 Physical 和 Override，Override 是 1080x1080。",
+      "expected_output": "拒绝使用失败采集后的旧 XML；本次独立 dump 失败非零；正常 Physical/Override 优先 Override，方形合法；显示尺寸不等于窗口或已旋转坐标系。",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "验收标准已经给全了，把拦截场景写成 flow。只在当前这台设备验证，点击后页面没跳就算通过吧。",
+      "expected_output": "不重复确认已明确的验收标准；页面没跳不足以证明拦截，需入口就绪、操作命中和观察窗；单设备证据只覆盖当前设备；清数据是额外高风险副作用，不能从脚本编写推导授权。",
+      "files": []
+    }
+  ],
+  "evaluation_status": "行为场景已登记；模板由 fake adb 和隔离子进程验证，未运行 Agent 行为对比或自动触发率评估，不代表真实 Maestro 或设备验收。"
+}

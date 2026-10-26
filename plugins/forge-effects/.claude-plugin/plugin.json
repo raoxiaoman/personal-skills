@@ -1,0 +1,8 @@
+{
+  "name": "forge-effects",
+  "version": "0.1.0",
+  "description": "视频特效开发、帧参数、GLSL 编写与渲染审查：依据真实宿主契约，按需使用 GPUImage 经验，不包含自动发布。",
+  "author": {
+    "name": "Forge contributors"
+  }
+}

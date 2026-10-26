@@ -1,0 +1,240 @@
+{
+  "schema_version": 1,
+  "id": "videoguru",
+  "module": "Guru",
+  "variant": "googlePlayRelease",
+  "sources": [
+    "main",
+    "international",
+    "googlePlay",
+    "release",
+    "googlePlayRelease"
+  ],
+  "modules": [
+    "Guru",
+    "VideoEngine",
+    "player",
+    "libCommonGraphics",
+    "libGraphicProc"
+  ],
+  "identity": {
+    "settings": "settings.gradle",
+    "module_build": "Guru/build.gradle",
+    "application_id": "videoeditor.videomaker.videoeditorforyoutube"
+  },
+  "version_path": "build.gradle",
+  "auth_path": "gradle/serverauth.gradle",
+  "di": {
+    "path": "Guru/src/main/java/com/camerasideas/instashot/UtDependencyInjection.kt",
+    "debug": "Guru/src/main/java/com/camerasideas/instashot/common/DebugManager.kt",
+    "util": "Guru/src/main/java/com/camerasideas/utils/newutils/AppUtil.kt",
+    "test_domains": [
+      "speech.inshot.one",
+      "aitest.inshot.one"
+    ],
+    "hook_end": "hookBodyParams",
+    "gates": [
+      "DebugManager.isDebugMode() && DebugManager.isAiTaskDebug()",
+      "if (!debug)",
+      "return url"
+    ],
+    "known_debug": "isReleaseAppVersion",
+    "known_util": "lastIndexOf(versionCode)"
+  },
+  "draft": {
+    "roots": [
+      "ClipInfo",
+      "BaseClipInfo"
+    ],
+    "registry": "release-draft-tests.json"
+  },
+  "purchase": {
+    "registry": "release-purchase-contracts.json",
+    "user": "Guru/src/main/java/com/camerasideas/instashot/common/UserManager.kt",
+    "normalization": [
+      "replace(\"_\", \"\")",
+      "substring(0, 16)"
+    ],
+    "source_roots": [
+      "libinshotpay/src/main/"
+    ]
+  },
+  "gradle": {
+    "dependency_task": ":Guru:dependencies",
+    "configuration": "googlePlayReleaseRuntimeClasspath",
+    "test_task": ":Guru:testGooglePlayDebugUnitTest",
+    "exclude": [
+      ":Guru:uploadServerAuthTask"
+    ],
+    "danger_patterns": [
+      "upload",
+      "publish",
+      "install",
+      "copy.*baselineprofile",
+      "manageddevice",
+      "pixel6Api34"
+    ]
+  },
+  "baseline": {
+    "task": ":Guru:mergeGooglePlayReleaseBaselineProfile",
+    "connected_task": ":BaselineProfile:connectedGooglePlayNonMinifiedReleaseAndroidTest",
+    "collect_task": ":BaselineProfile:collectGooglePlayNonMinifiedReleaseBaselineProfile",
+    "test": "com.android.baselineprofile.BaselineProfileGenerator",
+    "profile_dir": "Guru/src/googlePlayRelease/generated/baselineProfiles",
+    "results_dir": "BaselineProfile/build/outputs/androidTest-results/connected/nonminifiedrelease/flavors/googlePlay",
+    "files": [
+      "baseline-prof.txt",
+      "startup-prof.txt"
+    ],
+    "generation": "supported"
+  },
+  "capabilities": {
+    "version": "supported",
+    "auth": "supported",
+    "di": "supported",
+    "calls": "supported",
+    "dependencies": "supported",
+    "draft": "supported",
+    "purchase": "supported",
+    "configs": "supported",
+    "baseline": "supported",
+    "apk": "supported",
+    "tracking": "manual",
+    "ai": "manual",
+    "remote_config": "manual",
+    "channel": "manual",
+    "archive": "manual"
+  },
+  "configs": {
+    "hosts": [
+      "https://inshot.cc/VideoGuru/",
+      "https://aws.inshot.cc/VideoGuru/"
+    ],
+    "raw": [
+      [
+        "音乐",
+        "Guru/src/main/res/raw/music_config_android2.json",
+        "music_config_android2.json",
+        "music2"
+      ],
+      [
+        "字体",
+        "Guru/src/main/res/raw/font_config_android.json",
+        "font_config_android.json",
+        "font"
+      ],
+      [
+        "素材",
+        "Guru/src/main/res/raw/material_config_android.json",
+        "material_config_android.json",
+        "material"
+      ],
+      [
+        "更新",
+        "Guru/src/main/res/raw/update_config_android2.json",
+        "update_config_android2.json",
+        "update2"
+      ],
+      [
+        "滤镜",
+        "Guru/src/main/res/raw/config_filter_android.json",
+        "config_filter_android.json",
+        "filter"
+      ],
+      [
+        "封面",
+        "Guru/src/main/res/raw/cover_config_android_v2.json",
+        "cover_config_android_v2.json",
+        "cover"
+      ],
+      [
+        "更新菜单",
+        "Guru/src/main/res/raw/update_menu_config_android.json",
+        "update_menu_config_android.json",
+        "updateMenu"
+      ],
+      [
+        "远端配置",
+        "Guru/src/main/res/raw/remote_config_android.json",
+        "remote_config_android.json",
+        "remote"
+      ]
+    ],
+    "assets": [
+      [
+        "AIGC",
+        "Guru/src/main/assets/AiArt/ArtStyleConfig.json",
+        "AiArt/ArtStyleConfig.json",
+        "AiArt/ArtStyleConfig.json"
+      ],
+      [
+        "TTS",
+        "Guru/src/main/assets/TextToSpeech/TextToSpeechConfig.json",
+        "TextToSpeech/TextToSpeechConfig.json",
+        "TextToSpeech/TextToSpeechConfig.json"
+      ],
+      [
+        "首页工具",
+        "Guru/src/main/assets/Main/MainToolConfig.json",
+        "Main/MainToolConfig.json",
+        "Main/MainToolConfig.json"
+      ],
+      [
+        "埋点过滤",
+        "Guru/src/main/assets/analytics_filter_config_android.json",
+        "analytics_filter_config_android.json",
+        "analytics_filter_config_android.json"
+      ]
+    ],
+    "indexes": [
+      [
+        "Guru/src/main/res/raw/config_update_android.json",
+        "config_update_android.json"
+      ],
+      [
+        "Guru/src/main/assets/VersionInfo.json",
+        "VersionInfo.json"
+      ]
+    ],
+    "exceptions": [
+      {
+        "path": "Guru/src/main/res/raw/update_menu_config_android.json",
+        "mode": "deferred",
+        "status": "待确认",
+        "date": "2026-10-15",
+        "reason": "2026-10-15用户明确约定：历史更新菜单在本轮及后续版本只输出维护提醒，不作为发版问题或阻断项，不重复要求补索引或确认。不恢复入口、不启用旧样例；消费端仍有引用，但下载URL分支与包内回退未接通。未来明确要求恢复功能时再核对完整契约。提醒不代表功能已验证或已退役。"
+      },
+      {
+        "path": "Guru/src/main/assets/Main/MainToolConfig.json",
+        "mode": "deferred",
+        "status": "待确认",
+        "date": "2026-10-12",
+        "reason": "用户确认未配置正式首页工具正文，先标记；不猜地址、不以debug正文替代正式配置"
+      },
+      {
+        "path": "Guru/src/main/res/raw/config_filter_android.json",
+        "mode": "local-only",
+        "status": "待确认",
+        "date": "2026-10-12",
+        "reason": "用户确认当前仅维护包内滤镜配置；只检查本地结构/索引，不宣称已验证云端正文一致"
+      },
+      {
+        "path": "Guru/src/main/res/raw/update_config_android2.json",
+        "mode": "deferred",
+        "status": "待确认",
+        "date": "2026-10-12",
+        "reason": "update/update2下载地址、缓存与索引迁移不完整，用户决定暂缓；不以旧正文覆盖新版"
+      },
+      {
+        "path": "Guru/src/main/res/raw/remote_config_android.json",
+        "mode": "deferred",
+        "status": "待确认",
+        "date": "2026-10-13",
+        "reason": "自有RemoteConfig用户标记暂跳过，不修改正文/索引/URL，不等于通过或确认仅本地维护"
+      }
+    ]
+  },
+  "deferred_checks": {
+    "13": "2026-10-13用户决定暂缓Firebase RemoteConfig模板比较；此前403，未取得模板，不提权/修改默认值/发布配置"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "name": "forge-bugs",
+  "version": "0.1.0",
+  "description": "Bug 描述整理、修复衔接与 MantisBT 工单工具",
+  "author": {
+    "name": "Forge contributors"
+  }
+}

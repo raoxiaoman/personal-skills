@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "source_repo": "VideoGuruAndroid",
+  "purpose": "原始工具迁移来源记录；不是当前文件哈希、运行路径或本轮验证证据",
+  "files": {
+    "scripts/release-check.py": "a6ca4af847cbd087bb39075630e627967e3e563918ecbd77a3379a0286b715a7",
+    "scripts/baseline-profile.py": "9ee6e2153aeb80c0ef8734eafaad36c2f520c564a23154deedb0fe225ad67626",
+    "scripts/release_config_check.py": "af5156d924439a0a643a010230110ae15a4b3162e90053db9e26cde3f2c15e86",
+    "scripts/release_contract_tests.py": "cab7562fcfcca05236d02c68c761ccf5ee90c6b675c548fa7f9270ec565b5901",
+    "scripts/release_draft_check.py": "cde60d29d686bdd8cd03ca57917a1c3f190a98b6678c903bb9b8af1688c17082",
+    "scripts/release_purchase_check.py": "f930d62473911955e60d89dc5082eeafbe038fc4722a78e6fa79a33019e0e397",
+    "scripts/release-draft-tests.json": "ea5da6a429df534b5f922aa724292251f897efa1235f718c4b848a71e0e27f23",
+    "scripts/release-purchase-contracts.json": "f79eb7d61eaf28169969af4b55ec4c2ef142505d191f7dfe51ac1567cfc46002",
+    "scripts/release-check.md": "707bb6775310d4841d1b1be56f0fcc53eb9c155304e8cb5901a6dd3823ec58be",
+    "scripts/baseline-profile.md": "c6f18709a2581c1c833e3236074690f371952cb46f0a3df146d0f76df466405e",
+    "scripts/tests/test_baseline_profile.py": "3998fa013eda956a8e1a410ea9ea9a9b7ef08f4f25e214550138a8eea9f5f406",
+    "scripts/tests/test_release_check.py": "bda28f58dcbfe08fd6e9918b05fc563856777d5d2451852af74f611035ced987",
+    "scripts/tests/test_release_config_check.py": "6891efa948cdba14edcac106471fe52822887c789c6e66bd7bb98bdc74d92abf",
+    "scripts/tests/test_release_draft_check.py": "20402fd4a3ffd6699dd2054fed5918c3110c613a6ad60902291b8f381b9496b9",
+    "scripts/tests/test_release_purchase_check.py": "c9b27be3ffd598279c88c91c51ad09f630ca99f0ea26ee6733959b13a8b159b4"
+  }
+}

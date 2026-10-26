@@ -1,0 +1,33 @@
+{
+  "name": "personal-skills",
+  "owner": {
+    "name": "raohui"
+  },
+  "plugins": [
+    {
+      "name": "forge-android",
+      "source": "./plugins/forge-android",
+      "description": "Android 开发、重构、迁移、适配、UI 实现、业务埋点、日志、设备回归与发版检查：按任务分流，以实际证据交付。"
+    },
+    {
+      "name": "forge-effects",
+      "source": "./plugins/forge-effects",
+      "description": "视频特效开发、帧参数、GLSL 编写与渲染审查：依据真实宿主契约，按需使用 GPUImage 经验，不包含自动发布。"
+    },
+    {
+      "name": "forge-bugs",
+      "source": "./plugins/forge-bugs",
+      "description": "Bug 描述整理、修复衔接与 MantisBT 工单工具"
+    },
+    {
+      "name": "forge-templates",
+      "source": "./plugins/forge-templates",
+      "description": "封面模板本地制作、导出合并与资源打包：保护素材编号和手调结果，区分本地校验、设备验收与发布授权。"
+    },
+    {
+      "name": "task-shortcuts",
+      "source": "./plugins/task-shortcuts",
+      "description": "预备本会话下一步与工作区，原生执行 next 和 changes"
+    }
+  ]
+}

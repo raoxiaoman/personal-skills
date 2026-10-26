@@ -1,0 +1,6 @@
+{
+  "name": "forge-templates",
+  "version": "0.1.0",
+  "description": "封面模板本地制作、导出合并与资源打包：保护素材编号和手调结果，区分本地校验、设备验收与发布授权。",
+  "author": {"name": "Forge contributors"}
+}

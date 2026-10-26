@@ -1,0 +1,21 @@
+[
+  {
+    "id": "benefit-detail",
+    "labels": [
+      "UserA",
+      "UserB"
+    ],
+    "constants": {
+      "BENEFIT_USER_A": "UserA",
+      "BENEFIT_USER_B": "UserB"
+    },
+    "policy": "YouCut/src/main/java/com/camerasideas/instashot/SubscribeProPolicy.kt",
+    "entries": [
+      "YouCut/src/international/java/com/camerasideas/instashot/fragment/SubscribeProViewModel.kt",
+      "YouCut/src/international/java/com/camerasideas/instashot/fragment/ExclusiveBenefitsViewModel.kt",
+      "YouCut/src/international/java/com/camerasideas/mvp/commonpresenter/SubscribeProPresenter.kt",
+      "YouCut/src/main/java/com/camerasideas/instashot/common/usecase/BillingUseCase.kt"
+    ],
+    "tests": []
+  }
+]

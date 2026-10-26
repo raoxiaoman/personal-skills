@@ -1,0 +1,248 @@
+{
+  "schema_version": 1,
+  "id": "youcut",
+  "module": "YouCut",
+  "variant": "googlePlayRelease",
+  "sources": [
+    "main",
+    "international",
+    "googlePlay",
+    "release",
+    "googlePlayRelease"
+  ],
+  "modules": [
+    "YouCut",
+    "VideoEngine",
+    "player",
+    "libCommonGraphics",
+    "libGraphicProc"
+  ],
+  "identity": {
+    "settings": "settings.gradle",
+    "module_build": "YouCut/build.gradle",
+    "application_id": "com.camerasideas.trimmer"
+  },
+  "version_path": "build.gradle",
+  "auth_path": "gradle/serverauth.gradle",
+  "di": {
+    "path": "YouCut/src/main/java/com/camerasideas/instashot/UtDependencyInjection.kt",
+    "debug": "YouCut/src/main/java/com/camerasideas/instashot/common/DebugManager.kt",
+    "util": "YouCut/src/main/java/com/camerasideas/utils/Utils.java",
+    "test_domains": [
+      "speech.inshot.one",
+      "aitest.inshot.one"
+    ],
+    "hook_end": "hookBodyParams",
+    "gates": [
+      "DebugManager.isDebugMode() && DebugManager.isAiTaskDebug()",
+      "if (!debug)",
+      "return url"
+    ],
+    "known_debug": "isReleaseAppVersion",
+    "known_util": "lastIndexOf(versionCode)"
+  },
+  "draft": {
+    "roots": [
+      "BaseClipInfo",
+      "MediaClipInfo",
+      "PipClipInfo"
+    ],
+    "registry": "release-draft-tests.json"
+  },
+  "purchase": {
+    "registry": "release-purchase-contracts.json",
+    "user": "YouCut/src/main/java/com/camerasideas/instashot/common/UserManager.kt",
+    "normalization": [
+      "replace(\"_\", \"\")",
+      "substring(0, 16)"
+    ],
+    "source_roots": [
+      "libinshotpay/src/main/"
+    ]
+  },
+  "gradle": {
+    "dependency_task": ":YouCut:dependencies",
+    "configuration": "googlePlayReleaseRuntimeClasspath",
+    "test_task": ":YouCut:testGooglePlayDebugUnitTest",
+    "exclude": [
+      ":YouCut:uploadServerAuthTask"
+    ],
+    "danger_patterns": [
+      "upload",
+      "publish",
+      "install",
+      "copy.*baselineprofile",
+      "manageddevice",
+      "pixel6Api34"
+    ]
+  },
+  "baseline": {
+    "task": ":YouCut:mergeGooglePlayReleaseBaselineProfile",
+    "connected_task": ":BaselineProfile:connectedGooglePlayNonMinifiedReleaseAndroidTest",
+    "collect_task": ":BaselineProfile:collectGooglePlayNonMinifiedReleaseBaselineProfile",
+    "test": "com.android.baselineprofile.BaselineProfileGenerator",
+    "profile_dir": "YouCut/src/googlePlayRelease/generated/baselineProfiles",
+    "results_dir": "BaselineProfile/build/outputs/androidTest-results/connected/nonminifiedrelease/flavors/googlePlay",
+    "files": [
+      "baseline-prof.txt",
+      "startup-prof.txt"
+    ],
+    "generation": "pending"
+  },
+  "capabilities": {
+    "version": "supported",
+    "auth": "supported",
+    "di": "supported",
+    "calls": "supported",
+    "dependencies": "supported",
+    "draft": "supported",
+    "purchase": "supported",
+    "configs": "supported",
+    "baseline": "supported",
+    "apk": "supported",
+    "tracking": "manual",
+    "ai": "manual",
+    "remote_config": "manual",
+    "channel": "manual",
+    "archive": "manual"
+  },
+  "configs": {
+    "hosts": [
+      "https://inshot.cc/YouCut/",
+      "https://aws.inshot.cc/YouCut/"
+    ],
+    "raw": [
+      [
+        "模版",
+        "YouCut/src/main/res/raw/template_config_android.json",
+        "template_config_android.json",
+        "template"
+      ],
+      [
+        "模版匹配",
+        "YouCut/src/main/res/raw/template_match_config.json",
+        "template_match_config.json",
+        "templateMatch"
+      ],
+      [
+        "模板Discover",
+        "YouCut/src/main/res/raw/template_discover_android.json",
+        "template_discover_android.json",
+        "templateDiscover"
+      ],
+      [
+        "模板解锁",
+        "YouCut/src/main/res/raw/template_unlock_android.json",
+        "template_unlock_android.json",
+        "templateUnlock"
+      ],
+      [
+        "模版热门",
+        "YouCut/src/main/res/raw/template_hot_top_android.json",
+        "template_hot_top_android.json",
+        "templateTop"
+      ],
+      [
+        "模版关键词",
+        "YouCut/src/main/res/raw/template_search_keyword_android.json",
+        "template_search_keyword_android.json",
+        "templateKeyword"
+      ],
+      [
+        "模版推荐词",
+        "YouCut/src/main/res/raw/template_recommend_word_android.json",
+        "template_recommend_word_android.json",
+        "templateRecommendWord"
+      ],
+      [
+        "音乐",
+        "YouCut/src/main/res/raw/music_config_android2.json",
+        "music_config_android2.json",
+        "music2"
+      ],
+      [
+        "字体",
+        "YouCut/src/main/res/raw/font_config_android.json",
+        "font_config_android.json",
+        "font"
+      ],
+      [
+        "素材",
+        "YouCut/src/main/res/raw/material_config_android.json",
+        "material_config_android.json",
+        "material"
+      ],
+      [
+        "滤镜",
+        "YouCut/src/main/res/raw/config_filter_android.json",
+        "config_filter_android.json",
+        "filter"
+      ],
+      [
+        "社媒解锁",
+        "YouCut/src/main/res/raw/config_social_follow_android.json",
+        "config_social_follow_android.json",
+        "socialFollow"
+      ],
+      [
+        "更新",
+        "YouCut/src/main/res/raw/update_config_android.json",
+        "update_config_android.json",
+        "update"
+      ],
+      [
+        "更新菜单",
+        "YouCut/src/main/res/raw/update_menu_config_android.json",
+        "update_menu_config_android.json",
+        "updateMenu"
+      ],
+      [
+        "远端配置",
+        "YouCut/src/main/res/raw/remote_config_android.json",
+        "remote_config_android.json",
+        "remote"
+      ]
+    ],
+    "assets": [
+      [
+        "AIGC",
+        "YouCut/src/main/assets/AiArt/ArtStyleConfig2.json",
+        "AiArt/ArtStyleConfig2.json",
+        "AiArt/ArtStyleConfig2.json"
+      ],
+      [
+        "AI工具",
+        "YouCut/src/main/assets/AiTools/AiToolsConfig.json",
+        "AiTools/AiToolsConfig.json",
+        "AiTools/AiToolsConfig.json"
+      ],
+      [
+        "TTS",
+        "YouCut/src/main/assets/TextToSpeech/TextToSpeechConfig.json",
+        "TextToSpeech/TextToSpeechConfig.json",
+        "TextToSpeech/TextToSpeechConfig.json"
+      ]
+    ],
+    "indexes": [
+      [
+        "YouCut/src/main/res/raw/config_update_android.json",
+        "config_update_android.json"
+      ],
+      [
+        "YouCut/src/main/assets/VersionInfo.json",
+        "VersionInfo.json"
+      ]
+    ],
+    "root_version_keys": [
+      "templateMatch",
+      "templateDiscover",
+      "templateUnlock",
+      "templateTop",
+      "templateKeyword",
+      "templateRecommendWord",
+      "socialFollow",
+      "update"
+    ],
+    "exceptions": []
+  }
+}

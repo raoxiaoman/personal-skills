@@ -1,0 +1,14 @@
+[
+  {
+    "models": [
+      "MediaClipInfo",
+      "PipClipInfo"
+    ],
+    "tests": [],
+    "evidence": [
+      "YouCut/src/main/java/com/camerasideas/workspace/config/MediaClipConfig.java",
+      "YouCut/src/main/java/com/camerasideas/workspace/config/PipClipConfig.java",
+      "YouCut/src/main/java/com/camerasideas/workspace/config/BaseProfileConfig.java"
+    ]
+  }
+]

@@ -1,0 +1,17 @@
+{
+  "skill_name": "analytics",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "给 YouCut 的新处理功能解读埋点需求，先不要改代码：select_content 下 key=audio_process，操作值 start/finish，Retry 不统计 start；有人建议直接套 VideoGuru 的 AppTrack.logSimpleEvent，并把失败异常 message 一起上报。当前没有提供 YouCut 的封装代码。应用侧日志验收即可，缺 FA 日志是否要开 Debug 并重启？",
+      "expected_output": "给出事件字段与Retry映射，但不能确认未知项目API或套VideoGuru路径；拒绝原始异常载荷；应用侧验收不因SDK日志缺失擅自开Debug/重启；不假称已实现或已验证。",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "VideoGuru 需求写放在 select_content，content_type=denoise，最终点击完成时上报当前状态。历史 Completed 恢复和页面重建不能重复记 save。请核对映射与验证办法，不用GUI查看器。",
+      "expected_output": "核对现有logSimpleEvent实际实现和最终事件归属；区分本次结果与历史恢复，按会话幂等而非机械全局once；复用公共采集CLI，分开应用/SDK/服务端证据。",
+      "files": []
+    }
+  ]
+}

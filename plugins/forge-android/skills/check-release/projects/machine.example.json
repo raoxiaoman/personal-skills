@@ -1,0 +1,5 @@
+{
+  "schema_version": 1,
+  "avd": "<已有且明确授权的AVD名称>",
+  "sdk_root": "<本机SDK绝对路径>"
+}

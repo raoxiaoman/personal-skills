@@ -1,0 +1,7 @@
+[
+  {
+    "models": ["MediaClipInfo", "PipClipInfo", "AudioEnhanceInfo", "NoiseReduceInfo"],
+    "tests": ["com.camerasideas.workspace.config.DenoiseDraftRoundTripTest"],
+    "evidence": ["Guru/src/main/java/com/camerasideas/workspace/config/MediaClipConfig.java", "Guru/src/main/java/com/camerasideas/workspace/config/PipClipConfig.java", "Guru/src/main/java/com/camerasideas/workspace/config/BaseProfileConfig.java"]
+  }
+]

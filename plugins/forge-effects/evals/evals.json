@@ -1,0 +1,24 @@
+{
+  "skill_name": "forge-effects",
+  "scope": "One explicit-text routing smoke; no automatic trigger measurement or real GPU execution.",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "曝光0到18帧从0到2.6，18到25帧回0，只帮我整理参数。",
+      "expected_output": "develop轻量模式；帧表，无强制FPS、完整Filter或发布操作。",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "改一个ES2 fragment shader，宿主已给sampler和UV。需要注意目标设备fragment不支持highp，输出接一个保留中间值的pass。",
+      "expected_output": "shader；依据真实接口和误差选择精度，不无条件highp或clamp。",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "只审查这条现有滤镜链，UV越界做镜像采样，纹理尺寸和扩展还不清楚，alpha表示也没查到。",
+      "expected_output": "review只读；核实NPOT/wrap/alpha，不把未知当缺陷，不机械clamp或修改。",
+      "files": []
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "skill_name": "analyze-apk-size",
+  "evals": [
+    {"id": 1, "prompt": "比较这两个 APK，新包大了一点，分析主要增长来源：<old.apk> <new.apk>。", "expected_output": "先运行配套脚本；APK 压缩分类增量精确对账；DEX 专属结构明确标注为未压缩口径；版本/依赖证据分层。", "files": []},
+    {"id": 2, "prompt": "拿同一个 APK 当旧包和新包比较：<same.apk>。", "expected_output": "文件总增量、各分类、DEX 结构增量为零，不编造增长原因。", "files": []},
+    {"id": 3, "prompt": "比较 <old.apk> 与 <damaged.apk>，损坏也不要隐藏错误。", "expected_output": "无效 ZIP 明确错误；有效 ZIP 中损坏 DEX 返回 2、保留 ZIP 对账，禁止使用部分 DEX 做完整 SDK 归因。", "files": []}
+  ]
+}

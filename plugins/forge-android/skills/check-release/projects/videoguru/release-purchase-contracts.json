@@ -1,0 +1,26 @@
+[
+  {
+    "id": "retention",
+    "labels": ["retainA", "retainB"],
+    "constants": {"RETENTION_DIALOG_NEW": "retainA", "RETENTION_DIALOG_OLD": "retainB"},
+    "policy": "Guru/src/international/java/com/camerasideas/instashot/SubscribeProPolicy.kt",
+    "entries": ["Guru/src/international/java/com/camerasideas/instashot/fragment/SubscribeProViewModel.kt", "Guru/src/international/java/com/camerasideas/instashot/fragment/SubscribeProDetailViewModel.kt"],
+    "tests": ["com.camerasideas.instashot.RetentionLabelContractTest"]
+  },
+  {
+    "id": "normal-subscription",
+    "labels": ["UserA", "UserB"],
+    "constants": {},
+    "policy": "Guru/src/international/java/com/camerasideas/instashot/SubscribeProPolicy.kt",
+    "entries": ["Guru/src/international/java/com/camerasideas/instashot/fragment/SubscribeProViewModel.kt", "Guru/src/international/java/com/camerasideas/instashot/fragment/SubscribeProDetailViewModel.kt"],
+    "tests": []
+  },
+  {
+    "id": "subscribe-buttons",
+    "labels": ["pro2button", "pro3button"],
+    "constants": {},
+    "policy": "Guru/src/main/java/com/camerasideas/instashot/common/UserManager.kt",
+    "entries": ["Guru/src/international/java/com/camerasideas/mvp/commonpresenter/SubscribeProPresenter.kt"],
+    "tests": []
+  }
+]

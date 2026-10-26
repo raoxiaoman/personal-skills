@@ -1,0 +1,6 @@
+{
+  "name": "task-shortcuts",
+  "version": "0.1.9",
+  "description": "预备本会话下一步与工作区，原生执行 next 和 changes",
+  "types": "./types/index.d.ts"
+}

@@ -1,0 +1,8 @@
+{
+  "name": "forge-android",
+  "version": "0.4.0",
+  "description": "Android 开发、重构、迁移、适配、UI 实现、业务埋点、日志、设备回归与发版检查：按任务分流，以实际证据交付。",
+  "author": {
+    "name": "Forge contributors"
+  }
+}

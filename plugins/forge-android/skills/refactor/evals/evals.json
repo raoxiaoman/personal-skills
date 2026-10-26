@@ -1,0 +1,26 @@
+{
+  "skill_name": "refactor",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "整理 RefactorFixture.java 的 original 方法，保持行为。只处理这项局部整理，不创建额外架构或顺手改 Gate。根据给出的源码返回建议修改和最小验证方式，不声称已运行。",
+      "expected_output": "简化局部条件并保持边界值与 Java 整数行为；不自动提交，不要求大型计划或无关抽象。",
+      "files": ["RefactorFixture.java"],
+      "assertions": ["保持 active=false、amount<=0 及整数边界输入的行为", "不为局部整理新增类或框架", "区分建议验证与实际执行"]
+    },
+    {
+      "id": 2,
+      "prompt": "将 res/values/colors.xml 和 res/values-night/colors.xml 整理为唯一精确 palette，加清晰角色入口；只做结构保色，不做视觉收敛。调用方允许显式传入颜色覆盖资源默认值。说明迁移方案和验证缺口，不声称已运行 Android。",
+      "expected_output": "保留日夜精确值、别名消费者与显式构造覆盖；不强并相近颜色；说明宿主 XML 检查不能证明 Android 资源解析或设备视觉等价。",
+      "files": ["original/res/values/colors.xml", "original/res/values-night/colors.xml"],
+      "assertions": ["保留日夜限定资源的精确颜色", "保留已有资源消费者和显式覆盖优先级", "不把宿主侧 XML 模型当设备验收"]
+    },
+    {
+      "id": 3,
+      "prompt": "整理 RefactorFixture.java 的任务注册与 Gate，把重复组织收拢，保持行为。评估 sequential 改成 eager 或 deferred 是否等价，并检查同一实例重跑、旧回调和重复终态。给出最小改造及验证，不额外引入调度框架。",
+      "expected_output": "发现 eager 会提前读取状态，deferred 示例保持读取时点；保留实例和代次隔离、终态幂等，不声称例子证明真实 Android 线程与生命周期正确。",
+      "files": ["RefactorFixture.java"],
+      "assertions": ["识别 eager 产生 [1,1] 而非 [1,2]", "保留实例身份、执行代次和重复终态防护", "不制造额外调度架构"]
+    }
+  ]
+}

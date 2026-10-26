@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "id": "<新项目id>",
+  "module": "<主模块>",
+  "variant": "googlePlayRelease",
+  "sources": [
+    "main",
+    "international",
+    "googlePlay",
+    "release",
+    "googlePlayRelease"
+  ],
+  "modules": [
+    "<已核对模块>"
+  ],
+  "identity": {
+    "settings": "settings.gradle",
+    "module_build": "<模块>/build.gradle",
+    "application_id": "<正式applicationId>"
+  },
+  "version_path": "build.gradle",
+  "auth_path": "gradle/serverauth.gradle",
+  "di": {
+    "path": "<需核对>",
+    "debug": "<需核对>",
+    "util": "<需核对>",
+    "test_domains": [],
+    "hook_end": "<需核对>",
+    "gates": [],
+    "known_debug": "<需核对>",
+    "known_util": "<需核对>"
+  },
+  "draft": {
+    "roots": [],
+    "registry": "release-draft-tests.json"
+  },
+  "purchase": {
+    "registry": "release-purchase-contracts.json",
+    "user": "<模块>/src/main/java/<实际UserManager路径>",
+    "normalization": [],
+    "source_roots": []
+  },
+  "gradle": {
+    "dependency_task": "<白名单依赖任务>",
+    "configuration": "googlePlayReleaseRuntimeClasspath",
+    "test_task": "<白名单测试任务>",
+    "exclude": [
+      "<鉴权上传任务>"
+    ],
+    "danger_patterns": [
+      "upload",
+      "publish",
+      "install",
+      "copy.*baselineprofile",
+      "manageddevice"
+    ]
+  },
+  "baseline": {
+    "task": "<白名单merge任务>",
+    "connected_task": "<真实连接测试任务>",
+    "collect_task": "<真实collect任务>",
+    "test": "<实际生成器完整类名>",
+    "profile_dir": "<实际源码Profile目录>",
+    "results_dir": "<实际JUnit目录>",
+    "files": [
+      "baseline-prof.txt",
+      "startup-prof.txt"
+    ],
+    "generation": "pending"
+  },
+  "capabilities": {
+    "version": "pending",
+    "auth": "pending",
+    "di": "pending",
+    "calls": "pending",
+    "dependencies": "pending",
+    "draft": "pending",
+    "purchase": "pending",
+    "configs": "pending",
+    "baseline": "pending",
+    "apk": "pending",
+    "tracking": "pending",
+    "ai": "pending",
+    "remote_config": "pending",
+    "channel": "pending",
+    "archive": "pending"
+  },
+  "configs": {
+    "hosts": [],
+    "raw": [],
+    "assets": [],
+    "indexes": [],
+    "exceptions": [
+      {
+        "reason": "未完成资源与正式来源适配",
+        "status": "未执行"
+      }
+    ]
+  }
+}

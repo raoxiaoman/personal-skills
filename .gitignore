@@ -1,0 +1,28 @@
+# 系统与 Python 运行产物
+.DS_Store
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+
+# 依赖与运行产物
+node_modules/
+*.log
+/tmp/
+/backups/
+/cache/
+
+# 本地配置与凭据
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+api-token
+.claude/settings.local.json
+
+# 个人及业务数据：不作为技能源码同步
+/reports/
+/private/
+/user-data/
+/skills/work-report/reports/

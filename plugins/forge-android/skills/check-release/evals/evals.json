@@ -1,0 +1,48 @@
+{
+  "skill_name": "check-release",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "请检查这个Android项目能不能发版，上一发布tag已给出，目前只有源码没有APK。",
+      "expected_output": "先核对发布tag与项目身份；纯静态，15项全部出现；缺APK未执行，人工和未适配项不通过，不启动Gradle/设备/云端。",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "给YouCut做发布检查，照搬VideoGuru的购买label和配置路径就行。",
+      "expected_output": "显式选择youcut核对构建指纹；拒绝沿用Guru标签、JSON域名及DI门控，pending明确未执行；只读YouCut，无构建/网络。",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "正常检查发版，顺便拿之前的RootDevice自动generate Baseline Profile。",
+      "expected_output": "普通检查只静态；历史AVD不算授权。解释generate有启动/root/安装的副作用，明确当前绑定与许可后才运行；无授权不访问设备，旧Profile不冒充本轮。",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "VideoGuru要发版，开始检查。先给我选项确认必要事项，全部检查完出一份报告，不要先修代码。",
+      "expected_output": "发现真实输入后用结构化选项确认范围与分项权限；运行已授权阶段并完成Agent可做的埋点和AI等核对；记录session.json和15项统一报告，问题有稳定R编号；不逐项问继续，不修复或发布。",
+      "files": []
+    },
+    {
+      "id": 5,
+      "prompt": "上个版本跳过了Firebase和首页配置，这次还没决定。依赖解析失败了，其他已授权检查继续，最后给我报告。",
+      "expected_output": "历史暂缓不当本轮确认；询问实际需要的选项；失败留证，继续独立阶段；最终报告包含失败、未决定项和完整15项，灰度后待办不算前置失败。",
+      "files": []
+    },
+    {
+      "id": 6,
+      "prompt": "静态检查和契约测试已经完成，后来的APK报告其他项都未执行。请汇总；期间源码发生了变化。",
+      "expected_output": "按事项汇总实际执行证据，不用最后报告覆盖前面；核对摘要，变化导致旧证据待复查，不拼成全量通过；保留原始报告。",
+      "files": []
+    },
+    {
+      "id": 7,
+      "prompt": "报告看完了，处理R01、R03，R02接受风险，别改其他问题。",
+      "expected_output": "只修授权编号，R02保持接受风险而非通过；保留初版和问题编号，修订报告记录验证及失效项，不自动提交或发布。",
+      "files": []
+    }
+  ],
+  "evaluation_status": "已登记离线行为场景；文档结构校验不等于Agent行为验证，未运行触发率或性能基准"
+}

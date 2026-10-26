@@ -1,0 +1,17 @@
+{
+  "skill_name": "implement-ui",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "只分析现有 Android 页面与参考截图的差异，先别改代码或安装。截图显示按钮偏右，项目可能混用 Compose/XML；没有 Figma 链接。当前 ANDROID_SERIAL=SER-A，旧配置写着 RootDevice。请说明如何推进以及缺少哪些证据，不实际操作设备。",
+      "expected_output": "不强求 Figma；先定位真实页面和比较口径，区分只读分析与修改/安装授权；当前绑定优先，不自动选旧 AVD；不假称已视觉验收。",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "按明确的 Figma 节点修改已有 XML 页，保留业务状态和 Binding。编译通过，但还没安装新版，能用之前的截图宣布视觉通过吗？",
+      "expected_output": "按当前 Figma 服务前置流程读取上下文并适配项目组件，不改技术栈；旧截图不能验证新修改，编译和设备视觉分开；安装/启动按有效授权执行。",
+      "files": []
+    }
+  ]
+}
